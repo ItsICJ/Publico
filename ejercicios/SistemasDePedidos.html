@@ -1,0 +1,68 @@
+<!DOCTYPE "html">
+<html lang="es">
+
+<head> 
+<meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+<title>Sistema de Pedidos</title>
+<style>
+select{
+margin:15px
+}
+</style>
+</head>
+
+<body>
+<h1 id="Inicio"> Sistema de Pedidos </h1>
+
+
+<label for="mesa">¿En qué mesa está sentado?</label> </br>
+<select id="mesa" name="mesa">
+<option value="" selected="selected">- selecciona -</option>
+<option>Mesa 1</option>
+<option>Mesa 2</option>
+<option>Mesa 3</option>
+<option>Mesa 4</option>
+<option>Mesa 5</option>
+<option>Mesa 6</option>
+<option>Mesa 7</option>
+</select></br>
+
+<label for="personas">¿Cuántas personas hay sentadas en dicha mesa?</label> </br>
+<select id="personas" name="personas">
+<option value="" selected="selected">- selecciona -</option>
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+<option>6</option>
+<option>7</option>
+</select></br>
+
+¿Es usted vegetariano o vegano?</br></br>
+<input type="radio" name="vegetariano" value="vegetariano"/>Vegetariano.</br>
+<input type="radio" name="vegano" value="Vegano"/>Vegano.</br>
+<input type="radio" name="no" value="no"/>Ninguna de las anteriores.</br></br>
+
+<label for="menu">Elija el menú que más le apetezca:</label> </br>
+<select id="menu" name="menu">
+<option value="" selected="selected">- selecciona -</option>
+<option>Menú Mediterráneo</option>
+<option>Menú a la carta</option>
+<option>Menú Costa del Sol</option>
+<option>Menú La Parrilla</option>
+<option>Menú Amigo</option>
+<option>No quiero menú</option>
+</select></br>
+
+<label for="primerPlato"> Dígame cúal quiere que sea su primer plato (Sino ha elegido menú):</label> </br>
+<textarea id="primerPlato" name="primerPlato" cols="50" rows="2"></textarea></br></br>
+
+<label for="segundoPlato"> Dígame cúal quiere que sea su segundo plato (Sino ha elegido menú):</label> </br>
+<textarea id="segundoPlato" name="segundoPlato" cols="50" rows="2"></textarea></br></br>
+
+<input type="submit" name="enviar" value="Enviar" />
+<input type="reset" name="limpiar" value="Borrar pedido"/>
+</body>
+
+</html>
