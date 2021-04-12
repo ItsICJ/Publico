@@ -1,0 +1,57 @@
+/*CUSTOM CSS*/
+/*BODY*/
+#body{
+	background-color: #343330;
+	color: #F3F3F3;
+	font-size: 18px;
+	height: 100vh;
+	font-family: sans-serif;
+}
+/*END OF BODY*/
+/*NAVIGATION*/
+#navbar{
+	background-color: #9C0D38;
+	color: #F3F3F3;
+}
+#navbar.solid{
+	background-color: #9C0D38;
+	color: #F3F3F3;
+	transition-delay: 0.2s;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+}
+#navbar.nav-link{
+	color: #F3F3F3;
+}
+#navbar.nav-link:hover{
+	color: #DBDBDB;
+}
+/*END OF NAVIGATION*/
+/* LINKS */
+.link-1{
+	color: #343330;
+}
+.link-1:hover{
+	color: #1F5673;
+}
+.link-2{
+	color: #F3F3F3;
+}
+.link-2:hover{
+	color: #E8F7EE;
+}
+.link-3{
+	color: #F3F3F3;
+}
+.link-3:hover{
+	color: #E3EDE9;
+	text-decoration: none;
+}
+/* END OF LINKS */
+/* FOOTER */
+#footer{
+	background-color: #121420;
+	color: #F3F3F3;
+}
+/* END OF FOOTER */
+/*END OF CUSTOM CSS*/
