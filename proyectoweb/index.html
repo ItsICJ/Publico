@@ -14,7 +14,7 @@ Página principal
 	<meta name="viewport" content="width=content-width, initial-scale=1">
 	<!--CSS-->
 	<!--ICON-->
-	<link rel="stylesheet" type="text/css" href="insertar icono">
+	<link rel="shortcut icon" type="text/css" href="img/icon.ico">
 	<!-- GOOGLE FONT CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
@@ -44,7 +44,7 @@ Página principal
 			<div class="collapse navbar-collapse" id="expands">
 				<ul class="navbar-nav text-center ml-auto">
 					<li class="nav-item">
-						<a class="nav-link" href="#home">Inicio</a>
+						<a class="nav-link" href="#inicio">Inicio</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#blog">Artículos</a>
@@ -59,12 +59,25 @@ Página principal
 			</div>
 		</nav>
 	<!--END OF NAVIGATION BAR-->
+	<!-- INICIO -->
+  <section id="inicio">
+    <div class="inicio-container">
+      <div class="wow fadeIn">
+        <div class="inicio-logo">
+          <img class="" src="img/logoWeb.png" alt="Imperial">
+        </div>
+
+        <h1>¡Bienvenido a Cartéate!</h1>
+        <h2>Te presentamos <span class="rotating">numerosas técnicas, las mejores herramientas y consejos de escritura</span></h2>
+      </div>
+    </div>
+  </section>
+	<!-- END OF INICIO -->
 	<!-- BLOG -->
-  <section id="portfolio">
+  <section id="blog">
     <div class="container wow fadeInUp">
       <div class="row">
         <div class="col-md-12">
-          <h3 class="section-title">Portfolio</h3>
           <div class="section-title-divider"></div>
       </div>
 
@@ -146,7 +159,7 @@ Página principal
   </section>
 	<!-- END OF BLOG -->
 	<!-- NEWSLETTER -->
-		<section id="newsletter" class="parallax-4 img-fluid">
+		<section id="newsletter" class="parallax-4 img-fluid" style="background-image: url(img/wallpaper.png)";>
 			<div class="container-fluid h-100">
 				<div class="row h-100 align-items-center mt-5 justify-content-start">
 					<div class="col-11 col-sm-11 col-md-10 col-lg-10 col-xl-9 pl-0">
@@ -164,13 +177,44 @@ Página principal
 			</div>
 		</section>
 	<!-- END OF NEWSLETTER -->
-	<!--FOOTER-->
-	<section id="footer" class="fabtheme-link-show">
+	<!-- ABOUT -->
+  <section id="about">
+    <div class="container wow fadeInUp">
+      <div class="row">
+        <div class="col-md-12">
+          <h3 class="section-title">Sobre nosotros/as</h3>
+          <div class="section-title-divider"></div>
+          <p class="section-description">We want to help our readers and community members earn a living through writing. Writing is hard work and you should be compensated for your dedication to your craft.</p>
+        </div>
+      </div>
+    </div>
+    <div class="container about-container wow fadeInUp">
+      <div class="row">
+
+        <div class="col-lg-6 about-img">
+          <img src="img/about-img.jpg" alt="">
+        </div>
+
+        <div class="col-md-6 about-content">
+          <h2 class="about-title">Crea, inventa y emociona.</h2>
+          <p class="about-text">
+            Cartéate founder Some One acted upon his dream of launching media outlets under the Nao Media umbrella. But it wasn’t until he was introduced to the teachings of Brandon Gaille from The Blog Millionaire Podcast that he truly learned how to connect the science of keyword research and SEO with the art of writing and communication. Going through Brandon’s course inspired Some to launch InspireFirst. InspireFirst exists to help bloggers and authors like you to use your craft to inspire others and generate passive income.
+          </p>
+          <p class="about-text">
+            Cartéate teaches how to earn a passive income from your writing by teaching you how to write and publish helpful articles on your blog and/or publishing a book. Passive income accrues while you do other important things like spend time with family and friends or serve in your community.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+	<!-- END OF ABOUT -->
+	<!-- CONTACT -->
+	<section id="contact">
 		<div class="container-fluid h-100">
 			<div class="row h-100 align-items-center mt-5 justify-content-end">
 				<div class="col-11 col-sm-11 col-md-10 col-lg-10 col-xl-9 pr-0">
 					<div class="p-3 p-sm-4 p-md-4 p-lg-5 p-xl-5 text-right wow fadeInRight contact" data-wow-duration="3s">
-						<h2>Contactar</h2>
+						<h2 id="contact">Contactar</h2>
 						<p class="py-2">Cualquier duda o sugerencia... ¡Contacta con nosotr@s!</p>
 						<form id="form" class="contact-form" method="post" action="bat/contact.php">
 							<div class="row pt-2">
@@ -182,29 +226,29 @@ Página principal
 										<i class="fas fa-phone-alt"></i>
 										<p>(+34) 123 456 789</p>
 										<i class="fas fa-map-marker"></i>
-										<p>Número, Calle, Ciudad, Código Postal, Otros</p>
+										<p>Calle Hernán Ruiz, 6, 29008 Málaga</p>
 										<i class="fas fa-clock"></i>
 										<p>Lunes-Viernes: 8:30 AM to 6:00 PM, Sábado y Domingo: vacaciones</p>
 									</div>
 									<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-										<div class="form-group fabtheme-field">
+										<div class="form-group field">
 											<label for="form_name">Nombre *</label>
 											<input id="form_name" type="text" name="name" class="form-control" placeholder="Nombre" required="required">
 										</div>
-										<div class="form-group fabtheme-field">
+										<div class="form-group field">
 											<label for="form_lastname">Apellidos *</label>
 											<input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Apellidos" required="required">
 										</div>
-										<div class="form-group fabtheme-field">
+										<div class="form-group field">
 											<label for="form_email">Email *</label>
 											<input id="form_email" type="email" name="email" class="form-control" placeholder="Email" required="required">
 										</div>
-										<div class="form-group fabtheme-field">
+										<div class="form-group field">
 											<label for="form_message">Mensaje</label>
 											<textarea id="form_message" name="message" class="form-control" placeholder="Mensaje..." rows="4"></textarea>
 										</div>
-										<div class="form-group fabtheme-field">
-											<input type="submit" class="btn fabtheme-button" value="Send message">
+										<div class="form-group field">
+											<input type="submit" class="btn button" value="Send message">
 										</div>
 									</div>
 								</div>
@@ -213,8 +257,12 @@ Página principal
 					</div>
 				</div>
 			</div>
-			<div style="background-color: #333; float: left;" class="container-fluid h-100 p-3 p-sm-4 p-md-4 p-lg-5 p-xl-5">
-					<div style="text-align: center;">
+		</section>
+	<!-- END OF CONTACT -->	
+	<!--FOOTER-->
+	<section id="footer">			
+			<div class="container-fluid text-center h-100 p-3 p-sm-4 p-md-4 p-lg-5 p-xl-5">
+					<div style="float:right;width:700px;height:all;">
 						<p>
 							<a href="javascript:void(0);" class="fabtheme-link-3">Términos de Servicios</a>
 						</p>
@@ -228,11 +276,13 @@ Página principal
 						<a href="javascript:void(0);" class="link-3"><i class="fab fa-facebook-f fa-lg mr-2"></i></a>
 						<a href="javascript:void(0);" class="link-3"><i class="fab fa-twitter fa-lg mr-2"></i></a>
 						<a href="javascript:void(0);" class="link-3"><i class="fab fa-whatsapp fa-lg mr-2"></i></a>
-						<a href="javascript:void(0);" class="link-3"><i class="fab fa-reddit-alien fa-lg mr-2"></i></a>
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-reddit-alien fa-lg mr-2"></i></a><br><br>
 					</div>
-					<div class="col-12 text-center pt-3 pt-sm-4 pt-md-4 pt-lg-5 pt-xl-5">
-						<h6>CARTÉATE | © 2021</h6>
-					</div>
+						<div style="float: left; width: 700px;height: all;">
+							<p>Iván Carrillo Jiménez<br>1º DAW - Cenec Málaga<br>Créditos</p>
+							<h6>CARTÉATE | © 2021</h6>								
+						</div>	
+					<img src="img/logo.png">			
 			</div>
 	</section>
 	<!--END OF FOOTER-->

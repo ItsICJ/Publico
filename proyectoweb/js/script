@@ -1,4 +1,11 @@
-$(document).ready(function () {
+  JQuery(document).ready(function($){
+  // TEXTO ROTARIO
+  $("#inicio .rotating").Morphext({
+    animation: "flipInX",
+    separator: ",",
+    speed: 3000
+ });
+  // TEXTO ROTATORIO END
 	$(".owl-1").owlCarousel({
 		autoWidth: false,
 		items: 1,
@@ -27,8 +34,6 @@ $(document).ready(function () {
 			}
 		}
 	});
-});
-$(document).ready(function(){
 	$(".owl-2").owlCarousel({
 		items: 3,
 		loop: true,
@@ -62,10 +67,8 @@ $(document).ready(function(){
 		}
 		e.preventDefault();
 	});
-});
 /* END OF OWL CAROUSEL */
 /* COUNTER UP */
-$(document).ready(function () {
 	$('.counter-up').counterUp({
 		delay: 10,
 		time: 5000,
@@ -75,15 +78,11 @@ $(document).ready(function () {
 			return n.replace(/,/g, '.');
 		}
 	});
-});
 /* END OF COUNTER UP */
 /* WOW */
-$(document).ready(function(){
 	new WOW().init();
-});
 /* END OF WOW */
 /* NAVIGATION BAR */
-$(document).ready(function(){
 	$(window).scroll(function() {
 	    if ($(this).scrollTop() > 10 ) {
 	        $('#navbar').addClass('solid');
@@ -97,9 +96,7 @@ $(document).ready(function(){
 	    	$('#navbar').show();
 	    }
 	});
-});
 /* SMOOTH SCROLL */
-	$(document).ready(function(){
 		// Add smooth scrolling to all links
 		$("a").on('click', function(event) {
 			if (this.hash !== "") {
@@ -112,7 +109,6 @@ $(document).ready(function(){
 			  });
 			}
 		});
-	});
 /* END OF SMOOTH SCROLL */
 /* END OF NAVIGATION BAR */
 /* SCROLL TOP */
@@ -130,6 +126,7 @@ $(function(){
 		},3000, 'easeInOutExpo');
 		return false;
 	})
+});
 });
 /* END OF SCROLL TOP */
 /* END OF CUSTOM JS */
