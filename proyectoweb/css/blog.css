@@ -1,0 +1,63 @@
+/*CUSTOM CSS*/
+/*BODY*/
+#body{
+  background-color: #0B2161;
+  color: #F3F3F3;
+  font-size: 18px;
+  height: 100vh;
+  font-family: sans-serif;
+}
+/*END OF BODY*/
+/*NAVIGATION*/
+#navbar{
+  background-color: #0B6121;
+  color: black;
+}
+#navbar.solid{
+  background-color: #0B6121;
+  color: black;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+#navbar.nav-link{
+  color: #F3F3F3;
+}
+#navbar.nav-link:hover{
+  color: #DBDBDB;
+}
+/* END OF NAVIGATION */
+/* BLOG BODY */
+*{
+  box-sizing: border-box;
+}
+
+#caja-grande{
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+
+#caja-derecha{
+  float: right;
+  width: auto;
+  height: auto;
+  background-color: yellow;
+}
+
+#caja-izquierda1,#caja-izquierda2{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 20px;
+}
+/*END OF BLOG BODY*/
+/* FOOTER */
+.footer{
+  background-color: black;
+  color: #F3F3F3;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+/* END OF FOOTER */
+/*END OF CUSTOM CSS*/
