@@ -328,6 +328,9 @@
 	position: absolute;
  	width: 100%;
 }
+.etiqueta-principio{
+	color: black;
+}
 /* END OF FOOTER */
 /* SCROLL TOP */
 .scrolltop{
