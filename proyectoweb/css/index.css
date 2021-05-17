@@ -26,6 +26,9 @@
 #navbar.nav-link:hover{
 	color: #DBDBDB;
 }
+#logout {
+	display: none;
+}
 /* END OF NAVIGATION */
 /* INICIO */
 #inicio {

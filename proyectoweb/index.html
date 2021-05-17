@@ -31,7 +31,7 @@ Página principal
 	<!--END OF CSS-->
 </head>
 <!--END OF HEAD-->
-<body id="body">
+<body id="body" onload="cargarUser()">
 	<!--NAVIGATION BAR-->
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-expand-xl navbar-dark fixed-top">
 		<a class="navbar-brand" href="index.html">
@@ -43,6 +43,9 @@ Página principal
 			</button>
 			<div class="collapse navbar-collapse" id="expands">
 				<ul class="navbar-nav text-center ml-auto">
+					<li class="nav-item">
+						<a id="vacio" class="entrada mouse"></a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#inicio">Inicio</a>
 					</li>
@@ -59,6 +62,10 @@ Página principal
 						<a class="nav-link" href="#newsletter">Unirse</a>
 					</li>
 					<li class="nav-item">
+						<a class="nav-link" href="docs/dolly.html">Dolly</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" id="logout" onclick="logout()">Logout</a>
 						<a class="nav-link" href="docs/login.html">Login</a>
 					</li>					
 				</ul>
