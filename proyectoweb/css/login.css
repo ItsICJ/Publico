@@ -1,0 +1,50 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	background-image: url(../img/flowers.jpg);
+}
+
+.caja{
+	width: 300px;
+	padding: 40px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-color: #0B2161;
+	text-align: center;	
+	border-radius: 60px;
+}
+
+.caja input[type = "text"], .caja input[type = "password"] {
+	border:0;
+	background:none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 3px solid #0B6121;
+	padding: 14px 10px;
+	width: 200px;
+	outline: none;
+	color: white;
+	border-radius: 20px;
+}
+
+.caja input[type = "submit"] {
+	border:0;
+	background:none;
+	display: block;
+	margin: 20px auto;
+	text-align: center;
+	border: 2px solid gray;
+	padding: 14px 40px;
+	outline: none;
+	color: white;
+	cursor: pointer;
+	border-radius: 20px;
+}
+
+.caja input[type = "submit"]:hover {
+	background: gray;
+}
