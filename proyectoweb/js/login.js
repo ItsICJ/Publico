@@ -3,7 +3,7 @@
 let usrIntentando = "";
 let claveIntentando = "";
 
-function controlar(){
+function estado(){
   // determinamos en qué estado se carga la página:
   // 1 - sin usuario
   // 2 - usuario intentando ingresar
@@ -27,9 +27,9 @@ function controlar(){
       // estamos recargando luego de que haya un intento de login
       // debemos validar si el usuario existe
       validarXML();
-      window.location.assing("index.html");
+      window.location.assign("../index.html");
       // tardo un poco en recargar para dar tiempo a AJAX?
-      for(let timer=1;timer<1000000;timer++);
+      for(let timer=2;timer<1000000;timer++);
       location.reload();
       
     } else {
@@ -107,4 +107,10 @@ function controlar(){
     sessionStorage.removeItem("usuarioIntentando");
     sessionStorage.removeItem("claveIntentando");
     location.reload();
+  }
+
+  function saludo (){
+    if (sessionStorage.getItem("usuarioLogueado") !== null) {
+      document.getElementById('vacio').innerHTML = "Bienvenido/a" + sessionStorage.getItem("usuarioLogueado");
+    }
   }

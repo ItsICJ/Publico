@@ -28,6 +28,10 @@
 }
 #logout {
 	display: none;
+  border:none;
+}
+#desconectar {
+  display: inline-block;
 }
 /* END OF NAVIGATION */
 /* INICIO */
