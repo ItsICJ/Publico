@@ -27,7 +27,7 @@ function controlar(){
       // estamos recargando luego de que haya un intento de login
       // debemos validar si el usuario existe
       validarXML();
-      window.location.assing("https://ItsICJ.github.io/Publico/proyectoweb/index.html");
+      window.location.assing("index.html");
       // tardo un poco en recargar para dar tiempo a AJAX?
       for(let timer=1;timer<1000000;timer++);
       location.reload();
@@ -60,7 +60,7 @@ function controlar(){
     } else {
       document.getElementById("mensaje").innerHTML = "Este navegador no soporta web storage...";
     }
-    //window.location.assing("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
+
   }
   
   function validarXML() {
@@ -77,7 +77,7 @@ function controlar(){
         miFuncion(this);
       }
     };
-    xhr.open("GET", "https://ItsICJ.github.io/Publico/proyectoweb/xml/LM1.xml", true);
+    xhr.open("GET", "../xml/LM1.xml", true);
     xhr.send();
   }
 
