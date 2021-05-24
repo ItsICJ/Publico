@@ -1,0 +1,114 @@
+* {
+	box-sizing: border-box;
+}		
+body {
+	padding: 0;
+	margin: 0;
+	background-image: url(../img/flowers.jpg);
+	font-family: sans-serif;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto 10vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  overflow: auto;
+  margin: 25px auto;
+  position: relative;
+  height: 1000px;
+  grid-column: 1 / span 3;
+  grid-row: 2;
+}
+.container:hover .background {
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+      -ms-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
+}
+.container:hover .front {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.background {
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 900px;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transform-origin: top left;
+      -ms-transform-origin: top left;
+          transform-origin: top left;
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+
+.front {
+  top: 5%;
+  left: 17%;
+  z-index: 1;
+  position: absolute;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: -webkit-transform 1s;
+          transition: transform 1s;
+}
+/*NAVIGATION*/
+#navbar{
+  background-color: #0B6121;
+  color: black;
+}
+#navbar.solid{
+  background-color: #0B6121;
+  color: black;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+#navbar.nav-link{
+  color: #F3F3F3;
+}
+#navbar.nav-link:hover{
+  color: #DBDBDB;
+}
+/* END OF NAVIGATION */
+/* FOOTER */
+footer{
+  background-color: black;
+  color: #F3F3F3;
+  grid-row: 4;
+  grid-column: 1/ span 3;
+  text-align: center; 
+}
+input{
+	border-radius: 15px;
+	margin-left: 50px;
+}
+/* END OF FOOTER */
+/* LINKS */
+.link-1{
+	color: #343330;
+}
+.link-1:hover{
+	color: #1F5673;
+}
+.link-2{
+	color: #F3F3F3;
+}
+.link-2:hover{
+	color: #E8F7EE;
+}
+.link-3{
+	color: #F3F3F3;
+}
+.link-3:hover{
+	color: #E3EDE9;
+}
+
+/* END OF LINKS */
