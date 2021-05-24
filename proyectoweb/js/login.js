@@ -1,51 +1,110 @@
-function guardarUser() {
-	sessionStorage.setItem("nomUser", document.forms["Login"]["nombre"].value);
-	window.history.go(-1);
-}
 
-function leerXML() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      miFuncion(this);
-    }
-  };
-  xhr.open("GET", "https://ItsICJ.github.io/Publico/proyectoweb/xml/LM1.xml", true);
-  xhr.send();	
-}
+// las siguientes variables estarán como sessionStorage
+let usrIntentando = "";
+let claveIntentando = "";
 
-
-function miFuncion(xml) {
-  var i;
-  var usrNom;
-  var usrPsw;
-  var usuario = [];
-  var xmlDoc = xml.responseXML;
-  var x = xmlDoc.getElementsByTagName("usuario");
-  var esCorrecto = false; //Esta variable comprobará si el usuario y la contraseñas puesta en el formulario esta en el XML
-  var nomForm = document.forms["Login"]["nombre"].value; //Guarda el nombre que se ha puesto en el formulario
-  var passForm = document.forms["Login"]["pwd"].value; //Guarda la contraseña que se ha puesto en el formulario
-
-  for (i = 0; i <x.length; i++) { 
-	// leo las etiquetas que me interesan del objeto
-	usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
-	usrPsw = x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue;
-
-	//Compruebo si el usuario y la contraseña puesta en el formulario coincide con
-	//alguno de los campos del XML
-	if ((nomForm == usrNom) && (passForm == usrPsw)) {
-		esCorrecto = true;
-	}
-
-  }
-
-  //Si el nombre y la contraseña es correcto lo guarda en el sessionStorage y devuelve a la pagina
-  if (esCorrecto == true) {
-  	sessionStorage.setItem("nomUser", document.forms["Login"]["nombre"].value);
-	window.location.href = '../index.html';
+function controlar(){
+  // determinamos en qué estado se carga la página:
+  // 1 - sin usuario
+  // 2 - usuario intentando ingresar
+  // 3 - usuario con sesion iniciada
+  
+  $("#ingresar").show();
+  $("#desconectar").hide();
+      
+  if (sessionStorage.getItem("usuarioLogueado")) {
+    // estado 3 de nuestro diagrama de estados - con usuario
+    // estamos cargando la página teniendo un usuario logueado previamente
+    // y con la sesión activa pues no se ha desconectado aún
+    // ocultamos formulario de login y mostramos desconectar
+    var url=location.url;
+    $("#ingresar").hide();
+    $("#desconectar").show(); 
+    
   } else {
-  	//Si no es correcto mando una alerta
-  	window.alert("Nombre y/o contraseña incorrectos.");
+    if (sessionStorage.getItem("usuarioIntentando")) {
+      // estado 2 de nuestro diagrama de estados - transición
+      // estamos recargando luego de que haya un intento de login
+      // debemos validar si el usuario existe
+      validarXML();
+      window.location.assing("https://ItsICJ.github.io/Publico/proyectoweb/index.html");
+      // tardo un poco en recargar para dar tiempo a AJAX?
+      for(let timer=1;timer<1000000;timer++);
+      location.reload();
+      
+    } else {
+      // estado 1 de nuestro diagrama de estados - sin usuario
+      // mostramos formulario de login y ocultamos desconectar
+      $("#ingresar").show();
+      $("#desconectar").hide();
+    }
   }
-  // muestro en consola el array de usuarios registrados
 }
+  
+  function intentar(){
+    if (typeof(Storage) !== "undefined") {
+      
+      // oculta la opción de login 
+      // $("#ingresar").hide();
+      
+      // Almacena un valor usando el método setItem del objeto localStorage
+      var x=document.forms["formulario"]["usuario"].value;
+      var y=document.forms["formulario"]["password"].value;
+      console.log(x,y);
+      sessionStorage.setItem("usuarioIntentando", x);
+      sessionStorage.setItem("claveIntentando", y);
+      
+      // ya tengo en memoria webStorage lo que puso en el formulario
+      // al recargarse la página podré recordar esta información
+
+    } else {
+      document.getElementById("mensaje").innerHTML = "Este navegador no soporta web storage...";
+    }
+    //window.location.assing("https://sralex16.github.io/publico/proyecto_tercer_trimestre.html");
+  }
+  
+  function validarXML() {
+    
+    // lee desde aquí.
+    usuarioIntentando=sessionStorage.getItem("usuarioIntentando");
+    claveIntentando=sessionStorage.getItem("claveIntentando");
+    sessionStorage.removeItem("usuarioIntentando");
+    sessionStorage.removeItem("claveIntentando");
+    
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        miFuncion(this);
+      }
+    };
+    xhr.open("GET", "https://ItsICJ.github.io/Publico/proyectoweb/xml/LM1.xml", true);
+    xhr.send();
+  }
+
+  function miFuncion(xml) {
+    var i;
+    var usrNom;
+    var usrPsw;
+    var usuario = [];
+    var xmlDoc = xml.responseXML;
+    var x = xmlDoc.getElementsByTagName("usuario");
+    sessionStorage.removeItem("usuarioLogueado");
+    
+    for (i = 0; i <x.length; i++) { 
+    // leo las etiquetas que me interesan del objeto
+    usrNom = x[i].getElementsByTagName("nombre")[0].childNodes[0].nodeValue;
+    usrPsw = x[i].getElementsByTagName("clave")[0].childNodes[0].nodeValue;
+    // actualizo la tabla de visualización
+    if ((usrNom == usuarioIntentando) && (usrPsw == claveIntentando)) {
+      // destaca el usuario que coincide con lo que buscamos
+      sessionStorage.setItem("usuarioLogueado",usuarioIntentando);
+    }
+    }
+  }
+
+  function desconectar(){
+    sessionStorage.removeItem("usuarioLogueado");
+    sessionStorage.removeItem("usuarioIntentando");
+    sessionStorage.removeItem("claveIntentando");
+    location.reload();
+  }
