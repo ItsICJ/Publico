@@ -2,13 +2,39 @@
 <html>
 <head>
 	<title>Cartéate: mejora tu escritura</title>
+	<meta charset="utf-8">
+	<meta name="keywords" content="palabras clave aquí">
+	<meta name="description" content="El arte y la ciencia de la escritura: consejos y herramientas">
+	<meta name="author" content="Crystal">
+	<meta name="viewport" content="width=content-width, initial-scale=1">
+	<!--CSS-->
+	<!--ICON-->
+	<link rel="shortcut icon" type="text/css" href="../img/icon.ico">
+	<!-- GOOGLE FONT CSS -->
+	<link href="https://fonts.googleapis.com/css?family=Black+Han+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+	<!-- FONT AWESOME CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
+	<!-- BOOTSTRAP CSS -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<!-- OWL CAROUSEL CSS -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
+	<!-- ANIMATE CSS --> 
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
+	<!--MAIN STYLESHEET CSS-->
+	<link rel="stylesheet" type="text/css" href="../css/">
+	<!--END OF CSS-->
+<!--END OF HEAD-->
 </head>
 <body>
 	<style type="text/css">
+* {
+	box-sizing: border-box;
+}		
 body {
 	padding: 0;
 	margin: 0;
-	background-color: #666;
+	background-image: url(../img/flowers.jpg);
 	font-family: sans-serif;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -20,19 +46,19 @@ body {
   max-width: 900px;
   overflow: auto;
   margin: 25px auto;
-  position: absolute;
+  position: relative;
   height: 1000px;
   grid-column: 1 / span 3;
   grid-row: 2;
 }
 .container:hover .background {
-  -webkit-transform: scale(0) translate(-50%, -50%);
-      -ms-transform: scale(0) translate(-50%, -50%);
-          transform: scale(0) translate(-50%, -50%);
+  -webkit-transform: scale(0.9) translate(-50%, -50%);
+      -ms-transform: scale(0.9) translate(-50%, -50%);
+          transform: scale(0.9) translate(-50%, -50%);
 }
 .container:hover .front {
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
           transform: scale(1.1);
 }
 
@@ -63,12 +89,112 @@ body {
   -webkit-transition: -webkit-transform 1s;
           transition: transform 1s;
 }
+/*NAVIGATION*/
+#navbar{
+  background-color: #0B6121;
+  color: black;
+}
+#navbar.solid{
+  background-color: #0B6121;
+  color: black;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+#navbar.nav-link{
+  color: #F3F3F3;
+}
+#navbar.nav-link:hover{
+  color: #DBDBDB;
+}
+/* END OF NAVIGATION */
+/* FOOTER */
+footer{
+  background-color: black;
+  color: #F3F3F3;
+  grid-row: 4;
+  grid-column: 1/ span 3;
+  text-align: center; 
+}
+input{
+	border-radius: 15px;
+	margin-left: 50px;
+}
+/* END OF FOOTER */
+/* LINKS */
+.link-1{
+	color: #343330;
+}
+.link-1:hover{
+	color: #1F5673;
+}
+.link-2{
+	color: #F3F3F3;
+}
+.link-2:hover{
+	color: #E8F7EE;
+}
+.link-3{
+	color: #F3F3F3;
+}
+.link-3:hover{
+	color: #E3EDE9;
+}
 
+/* END OF LINKS */
 	</style>
+	<!--NAVIGATION BAR-->
+	<nav id="navbar" class="navbar navbar-expand-lg navbar-expand-xl navbar-dark fixed-top">
+		<a class="navbar-brand" href="../index.html">
+			<!--WEBSITE LOGO -->
+			CARTÉATE
+		</a>
+		<a class="navbar-brand" href="../docs/dolly.pdf">
+			<input type="button" name="abrirPdf" value="PDF" src="../docs/dolly.pdf"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#expands" aria-controls="expands" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="expands">
+				<ul class="navbar-nav text-center ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#inicio">Inicio</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#blog">Artículos</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html#about">Sobre nosotros/as</a>
+					</li>					
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html#contact">Contactar</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="../index.html#newsletter">Unirse</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="login.html">Login</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	<!--END OF NAVIGATION BAR-->	
 		<div class="container">
-  			<div class="front"><img src="../img/iris2.png" width="600px" height="900px" /></div>
-  			<div class="background"><img src="../img/iris.jpg" width="600px" height="900px"  /></div>
+  			<div class="front"><img src="../img/mirio2.png" width="600px" height="900px" /></div>
+  			<div class="background"><img src="../img/mirio.jpg" width="600px" height="900px"  /></div>
 		</div>	
-
+		<footer>
+					<div style="margin-top: 20px;">
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-instagram fa-lg mr-2"></i></a>
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-facebook-f fa-lg mr-2"></i></a>
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-twitter fa-lg mr-2"></i></a>
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-whatsapp fa-lg mr-2"></i></a>
+						<a href="javascript:void(0);" class="link-3"><i class="fab fa-reddit-alien fa-lg mr-2"></i></a><br><br>
+					</div>
+						<div>
+							<p>Iván Carrillo Jiménez<br>1º DAW - Cenec Málaga<br>Créditos</p>
+							<h6>CARTÉATE | © 2021</h6>								
+						</div>	
+					<img src="../img/logo.png">			
+			</div></footer>
 </body>
 </html>
