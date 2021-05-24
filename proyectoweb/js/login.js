@@ -10,7 +10,7 @@ function leerXML() {
       miFuncion(this);
     }
   };
-  xhr.open("GET", "https://github.com/ItsICJ/Publico/proyectoweb/xml/LM1.xml", true);
+  xhr.open("GET", "https://ItsICJ.github.io/Publico/proyectoweb/xml/LM1.xml", true);
   xhr.send();	
 }
 
