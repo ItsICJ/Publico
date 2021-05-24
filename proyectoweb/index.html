@@ -31,7 +31,7 @@ Página principal
 	<!--END OF CSS-->
 </head>
 <!--END OF HEAD-->
-<body id="body" onload="cargarUser()">
+<body id="body" onload="controlar()">
 	<!--NAVIGATION BAR-->
 	<nav id="navbar" class="navbar navbar-expand-lg navbar-expand-xl navbar-dark fixed-top">
 		<a class="navbar-brand" href="index.html">
@@ -65,7 +65,7 @@ Página principal
 						<a class="nav-link" href="docs/dolly.html">Dolly</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" id="logout" onclick="logout()">Logout</a>
+						<a class="nav-link" id="logout" onclick="desconectar()">Logout</a>
 						<a class="nav-link" href="docs/login.html">Login</a>
 					</li>					
 				</ul>
@@ -315,6 +315,7 @@ Página principal
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<!-- MAIN JS -->
 	<script src="js/script.js"></script>
+	<script src="js/login.js"></script>
 	<!-- END OF JQUERY JS -->
 </body>
 </html>
