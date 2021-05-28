@@ -110,7 +110,7 @@ function estado(){
   }
 
   function saludo (){
-    if (sessionStorage.getItem("usuarioLogueado") !== null) {
-      document.getElementById('vacio').innerHTML = "Bienvenido/a" + sessionStorage.getItem("usuarioLogueado");
+    if (sessionStorage.getItem("usrNom") !== null) {
+      document.getElementById('vacio').innerHTML = "Bienvenido/a" + sessionStorage.getItem("usrNom");
     }
   }

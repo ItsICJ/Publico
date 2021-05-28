@@ -1,0 +1,29 @@
+/* defino variables */
+
+:root {
+	/* colores de fondo posibles */
+	--colorBgDia: none;
+	--colorBgNoche: none;
+
+	/* colores de fuente */
+	--colorDia: green;
+	--colorNoche: darkgray;
+
+	/*  inicializo las variables que voy a aplicar y creo una variable que lo registre*/
+	--colorBg: var(--colorBgNoche);
+	--color: var(--colorNoche);
+	--modo:"noche";
+}
+
+/* aplico un valor inicial por defecto a todos los elementos de la pagina  */
+
+*{
+    background-color: var(--colorBg);
+	color: var(--color);
+}
+
+/* con javascript modificaré durante la ejecución
+   las variables --colorBg y --color según lo que el usuario elija
+   y actualizando el valor de la variable --modo   */
+
+

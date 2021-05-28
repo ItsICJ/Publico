@@ -131,7 +131,6 @@
 }
 
 #about .about-title {
-  color: #333;
   font-weight: 700;
   font-size: 28px;
 }
@@ -337,6 +336,10 @@
 }
 .etiqueta-principio{
 	color: black;
+  text-align: center;
+}
+.creditos, .creditos:hover {
+  color:darkgray;
 }
 /* END OF FOOTER */
 /* SCROLL TOP */

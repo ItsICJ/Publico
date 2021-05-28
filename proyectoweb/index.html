@@ -28,6 +28,7 @@ Página principal
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" rel="stylesheet">
 	<!--MAIN STYLESHEET CSS-->
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css">
 	<!--END OF CSS-->
 </head>
 <!--END OF HEAD-->
@@ -38,13 +39,14 @@ Página principal
 			<!--WEBSITE LOGO -->
 			CARTÉATE
 		</a>
+		<button id="mensajeBoton" onclick="ponerModo('')">Comenzar</button>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#expands" aria-controls="expands" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
 			<div class="collapse navbar-collapse" id="expands">
 				<ul class="navbar-nav text-center ml-auto">
 					<li class="nav-item">
-						<div style="color: white;" class="nav-link" id="vacio" onclick="saludo()">Hola</div>
+						<div style="color: white;" class="nav-link" id="vacio" onclick="saludo()"></div>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#inicio">Inicio</a>
@@ -63,6 +65,9 @@ Página principal
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="docs/dolly.html">Dolly</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="docs/diagramas.html">Diagramas</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" id="desconectar" onclick="desconectar()">Logout</a>
@@ -205,7 +210,7 @@ Página principal
       <div class="row">
 
         <div class="col-lg-6 about-img">
-          <img src="img/about-img.jpg" alt="">
+          <img src="img/about-img.jpg">
         </div>
 
         <div class="col-md-6 about-content">
@@ -231,7 +236,7 @@ Página principal
 						<form id="form" class="contact-form" method="post" action="bat/contact.php">
 							<div class="row pt-2">
 								<div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-									<a href="javascript:void(0);" class="fabtheme-link-2">
+									<a href="javascript:void(0);" class="link-2">
 										<i class="fas fa-envelope-open"></i>
 										<p>info@carteate.com</p>
 										</a>
@@ -283,8 +288,9 @@ Página principal
 						<a href="javascript:void(0);" class="link-3"><i class="fab fa-reddit-alien fa-lg mr-2"></i></a><br><br>
 					</div>
 						<div>
-							<p>Iván Carrillo Jiménez<br>1º DAW - Cenec Málaga<br>Créditos</p>
-							<h6>CARTÉATE | © 2021</h6>								
+							<p>Iván Carrillo Jiménez<br>1º DAW - Cenec Málaga<br></p>
+							<a class="creditos" href="docs/creditos.pdf">Créditos</a><br><br>
+							<h6>CARTÉATE | &copy 2021</h6>								
 						</div>	
 					<img src="img/logo.png">			
 			</div>
@@ -316,6 +322,7 @@ Página principal
 	<!-- MAIN JS -->
 	<script src="js/script.js"></script>
 	<script src="js/login.js"></script>
+	<script src="js/modo.js"></script>
 	<!-- END OF JQUERY JS -->
 </body>
 </html>

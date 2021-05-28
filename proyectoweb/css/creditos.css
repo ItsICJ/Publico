@@ -1,0 +1,73 @@
+* {
+	box-sizing: border-box;
+}		
+body {
+	padding: 0;
+	margin: 0;
+	background-image: url(../img/flowers.jpg);
+	font-family: sans-serif;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto 10vh;
+}
+#container {
+  float: right;
+  margin-top: 20px;
+}
+
+/*NAVIGATION*/
+#navbar{
+  background-color: #0B6121;
+  color: black;
+}
+#navbar.solid{
+  background-color: #0B6121;
+  color: black;
+  transition-delay: 0.2s;
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+}
+#navbar.nav-link{
+  color: #F3F3F3;
+}
+#navbar.nav-link:hover{
+  color: #DBDBDB;
+}
+/* END OF NAVIGATION */
+/* FOOTER */
+footer{
+  background-color: black;
+  color: #F3F3F3;
+  grid-row: 4;
+  grid-column: 1/ span 3;
+  text-align: center; 
+}
+input{
+	border-radius: 15px;
+	margin-left: 50px;
+}
+.creditos, .creditos:hover {
+  color:darkgray;
+}
+/* END OF FOOTER */
+/* LINKS */
+.link-1{
+	color: #343330;
+}
+.link-1:hover{
+	color: #1F5673;
+}
+.link-2{
+	color: #F3F3F3;
+}
+.link-2:hover{
+	color: #E8F7EE;
+}
+.link-3{
+	color: #F3F3F3;
+}
+.link-3:hover{
+	color: #E3EDE9;
+}
+
+/* END OF LINKS */
